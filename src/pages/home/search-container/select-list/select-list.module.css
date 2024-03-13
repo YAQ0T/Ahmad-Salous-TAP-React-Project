@@ -1,0 +1,22 @@
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg_default);
+  width: 12%;
+  padding-inline: 10px;
+  height: 55px;
+  justify-content: center;
+}
+
+.selectContainer label {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: start;
+  padding-left: 4px;
+}
+select {
+  border: 0;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 600;
+}

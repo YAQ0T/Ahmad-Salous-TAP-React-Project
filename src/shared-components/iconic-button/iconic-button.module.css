@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg_default);
+  border: 1px solid var(--lines-color);
+  height: 30px;
+  color: var(--body-text);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  min-width: 115px;
+  justify-content: space-around;
+}

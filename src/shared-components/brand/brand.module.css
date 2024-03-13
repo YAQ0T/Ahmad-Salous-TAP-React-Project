@@ -1,0 +1,29 @@
+#brandLeft {
+  height: 65px;
+  width: 88vw;
+  position: absolute;
+
+  left: 0;
+  z-index: 1;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+
+  background: linear-gradient(
+    270deg,
+    rgba(3, 162, 141, 1),
+    rgba(7, 107, 170, 1)
+  );
+}
+#brandRight {
+  height: 65px;
+  position: absolute;
+  width: 88vw;
+  left: 12vw;
+
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+
+  background: linear-gradient(
+    90deg,
+    rgba(3, 193, 128, 1),
+    rgba(3, 193, 129, 1)
+  );
+}

@@ -1,0 +1,12 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3%;
+  padding-block: 10px;
+  align-items: center;
+  background-color: var(--bg_default);
+}
+.navButtons {
+  display: flex;
+  gap: 4px;
+}

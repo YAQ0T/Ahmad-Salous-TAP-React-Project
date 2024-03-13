@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { SelectList } from "./pages/home/search/select-list/select-list";
+import { BottomHeader } from "./shared-components/buttom-header/bottom-header";
+import { Header } from "./shared-components/header/header";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <BottomHeader />
+      <SelectList label={"Sort by:"} />
     </div>
   );
 }
