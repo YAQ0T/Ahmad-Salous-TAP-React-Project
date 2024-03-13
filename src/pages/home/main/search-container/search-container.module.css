@@ -1,0 +1,14 @@
+.searchContainer {
+  display: flex;
+  height: 55px;
+  background-color: var(--bg_default);
+  width: 92vw;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px var(--lines-color);
+}
+.modifyContainer {
+  display: flex;
+  width: 29%;
+  justify-content: space-around;
+}

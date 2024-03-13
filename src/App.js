@@ -1,5 +1,5 @@
 import "./App.css";
-import { SelectList } from "./pages/home/search/select-list/select-list";
+import { Main } from "./pages/home/main/main";
 import { BottomHeader } from "./shared-components/buttom-header/bottom-header";
 import { Header } from "./shared-components/header/header";
 
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <BottomHeader />
-      <SelectList label={"Sort by:"} />
+      <Main />
     </div>
   );
 }

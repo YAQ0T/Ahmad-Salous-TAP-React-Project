@@ -1,0 +1,9 @@
+.cardInfo {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.cardInfo p {
+  margin: 0;
+}

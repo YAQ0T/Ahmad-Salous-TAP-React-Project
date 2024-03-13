@@ -1,0 +1,6 @@
+.starsContainer {
+  padding-bottom: 10px;
+}
+.starsContainer ion-icon {
+  color: var(--star-color);
+}
