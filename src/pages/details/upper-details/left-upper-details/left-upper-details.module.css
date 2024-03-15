@@ -1,0 +1,22 @@
+.leftUpperDetailsContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  position: relative;
+  left: 18%;
+}
+.innerLeftUpperDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.innerLeftUpperDetailsContainer p {
+  text-align: start;
+}
+.innerLeftUpperDetailsContainer h1 {
+  margin: 0;
+}
+.innerLeftUpperDetailsContainer > p:nth-child(1) {
+  margin-bottom: 0;
+}

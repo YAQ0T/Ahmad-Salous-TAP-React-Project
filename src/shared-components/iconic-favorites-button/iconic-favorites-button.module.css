@@ -1,0 +1,12 @@
+.IconicFavoritesButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  border: 0;
+  color: var(--bg_default);
+  align-items: center;
+  font-size: 22px;
+  font-weight: 400;
+  height: 55px;
+}

@@ -1,0 +1,5 @@
+.upperDetailsContainer {
+  background-color: var(--body-text);
+  display: flex;
+  position: relative;
+}

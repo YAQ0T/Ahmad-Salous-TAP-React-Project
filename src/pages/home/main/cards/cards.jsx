@@ -1,12 +1,12 @@
 import { Card } from "../../../../shared-components/card/card";
 import styles from "./cards.module.css";
-import image from "../../../../logos/html.png";
 
 export function Cards() {
+  let image = "/logos/html.png";
   return (
     <div className={styles.cards}>
       <Card
-        image={image}
+        image={"/logos/html.png"}
         title={"Web Development Languages"}
         name={"HTML"}
         stars={5}

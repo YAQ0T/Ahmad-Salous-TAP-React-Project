@@ -1,0 +1,49 @@
+.favoritesContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg_default);
+  width: 100%;
+}
+.favoritesInnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 92%;
+  padding-block: 20px;
+}
+.favoritesInnerContainer p {
+  margin-top: 0;
+}
+.smallCards {
+  height: 150px;
+  display: flex;
+  gap: 15px;
+  overflow: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+.smallCards::-webkit-scrollbar {
+  height: 5px;
+  width: 10px; /* Set width of the scrollbar */
+}
+
+/* Track */
+.smallCards::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Set background color of the scrollbar track */
+  background: var(--bg_body);
+}
+
+/* Handle */
+.smallCards::-webkit-scrollbar-thumb {
+  background: #f1f1f1; /* Set color of the scrollbar handle */
+  border-radius: 5px; /* Set border radius of the scrollbar handle */
+}
+
+/* Handle on hover */
+.smallCards::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Set color of the scrollbar handle on hover */
+}

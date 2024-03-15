@@ -1,4 +1,4 @@
-import { Paragraph } from "../../Text/Paragraph";
+import { Paragraph } from "../../Text/paragraph";
 import { Stars } from "../../stars/stars";
 import styles from "./card-info.module.css";
 export function CardInfo({ title, name, stars, author }) {
