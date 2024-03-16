@@ -12,10 +12,11 @@ function App() {
       <BottomHeader />
       <Details />
       {/* <Main />
+     
+      <Favorites /> */}
       <div id="year-of-develope">
         Developed with <ion-icon name="heart"></ion-icon> © 2024
       </div>
-      <Favorites /> */}
     </div>
   );
 }

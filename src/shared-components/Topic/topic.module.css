@@ -1,0 +1,16 @@
+.topicContainer {
+  height: 58px;
+  font-size: 16px;
+  border-top: 1px solid var(--lines-color);
+  display: flex;
+  width: 100%;
+  padding-inline: 30px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+}
+.topicContainer ion-icon {
+  color: var(--brand-secondary);
+  font-size: 25px;
+}

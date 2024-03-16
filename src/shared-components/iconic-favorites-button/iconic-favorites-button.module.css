@@ -10,3 +10,7 @@
   font-weight: 400;
   height: 55px;
 }
+.IconicFavoritesButtonContainer ion-icon {
+  color: var(--bg_default);
+  font-size: 30px;
+}
