@@ -8,7 +8,7 @@ export function CardWithButton({ image, name, author }) {
       <img src={`/logos/${image}`} alt={image} />
       <div className={styles.cardWithButtonInfo}>
         <p>
-          <b>{name}</b> by <a href="">{author}</a>
+          <b>{name}</b> by <a href="./">{author}</a>
         </p>
 
         <div className={styles.cardWithButtonInnerInfo}>

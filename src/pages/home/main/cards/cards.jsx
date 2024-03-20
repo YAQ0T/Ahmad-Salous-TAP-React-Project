@@ -1,115 +1,22 @@
 import { Card } from "../../../../shared-components/card/card";
 import styles from "./cards.module.css";
 
-export function Cards() {
-  let image = "/logos/html.png";
+export function Cards({ cards }) {
   return (
     <div className={styles.cards}>
-      <Card
-        image={"/logos/html.png"}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
-      <Card
-        image={image}
-        title={"Web Development Languages"}
-        name={"HTML"}
-        stars={5}
-        author={"Author: Sarah Smith"}
-      />
+      {cards.map((card) => {
+        return (
+          <Card
+            key={card.id}
+            id={card.id}
+            image={`/logos/${card.image}`}
+            title={card.category}
+            name={card.topic}
+            stars={5}
+            author={card.name}
+          />
+        );
+      })}
     </div>
   );
 }

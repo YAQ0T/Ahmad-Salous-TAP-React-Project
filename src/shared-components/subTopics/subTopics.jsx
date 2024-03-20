@@ -1,22 +1,19 @@
 import styles from "./subTopics.module.css";
 import { BigTitle } from "../Text/big-title";
 import { Topic } from "../Topic/topic";
-export function SubTopics({ id }) {
+export function SubTopics({ data }) {
   return (
     <div className={styles.subTopicsContainer}>
-      <BigTitle data={"HTML Sub Topics"} size={"24px"} weight={"800"} />
+      <BigTitle
+        data={`${data.topic} Sub Topics`}
+        size={"24px"}
+        weight={"800"}
+      />
 
       <ul className={styles.Topics}>
-        <Topic data={"HTML syntax and structure"} />
-        <Topic data={"HTML elements and attributes"} />
-
-        <Topic data={"HTML forms and input elements"} />
-
-        <Topic data={"HTML tables and lists"} />
-
-        <Topic data={"HTML multimedia elements (audio, video, images)"} />
-
-        <Topic data={"HTML accessibility and semantic markup"} />
+        {data.subtopics.map((supTopic) => {
+          return <Topic data={supTopic} key={supTopic} />;
+        })}
       </ul>
     </div>
   );

@@ -8,3 +8,9 @@
   height: 130px;
   object-fit: fill;
 }
+.card a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
