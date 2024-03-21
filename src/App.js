@@ -4,26 +4,15 @@ import { Details } from "./pages/details/details";
 import { Main } from "./pages/home/main/main";
 import { BottomHeader } from "./shared-components/buttom-header/bottom-header";
 import { Header } from "./shared-components/header/header";
-import UseAxios from "./hooks/useAxios";
-
+// use story telling in the intruduce ur self
 function App() {
-  const { res, error } = UseAxios(
-    "https://tap-web-1.herokuapp.com/topics/list",
-    "GET"
-  );
-  if (error) {
-    console.log(error);
-  }
   return (
     <div className="App">
       <Header />
       <BottomHeader />
       <Routes>
         <Route path="/">
-          <Route
-            index
-            element={!res ? <div>Loading...</div> : <Main cards={res} />}
-          />
+          <Route index element={<Main />} />
           <Route path="details/:id" element={<Details />} />
         </Route>
       </Routes>
