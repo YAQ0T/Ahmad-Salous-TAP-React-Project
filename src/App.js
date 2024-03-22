@@ -6,6 +6,7 @@ import { BottomHeader } from "./shared-components/buttom-header/bottom-header";
 import { Header } from "./shared-components/header/header";
 import { useState } from "react";
 import { Favorites } from "./shared-components/favorites/favorites";
+
 // use story telling in the intruduce ur self
 function App() {
   const [showFavorites, setShowFavorites] = useState("none");
