@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from "./search.module.css";
 import UseAxios from "../../../../../hooks/useAxios";
-import debounce from "../../../../../utils/debounce-cards";
 import filterCards from "../../../../../utils/filter-cards";
 import sortCards from "../../../../../utils/sort-cards";
+import { useDebounce } from "../../../../../hooks/useDebounce";
 
 export function Search({
   value,
@@ -13,31 +13,27 @@ export function Search({
   sortBy,
 }) {
   const [searchValue, setSearchValue] = useState("");
+  const debouncedSearched = useDebounce(searchValue);
   const { res, error } = UseAxios(
-    `https://tap-web-1.herokuapp.com/topics/list?phrase=${searchValue}`
+    `https://tap-web-1.herokuapp.com/topics/list?phrase=${debouncedSearched}`
   );
   const handleInput = (e) => {
     let value = e.target.value;
     setSearchValue(value);
   };
   useEffect(() => {
-    const [debouncedSetCards, cancel] = debounce(() => {
-      console.log(searchValue);
+    if (res) {
       setOriginalCards(res);
       setModifiedCards(res);
       const filtered = filterCards(res, filterBy.current);
-      // Sort the filtered cards
       const sorted = sortCards(filtered, sortBy.current);
-      // Update modified cards
       setModifiedCards(sorted);
-    }, 300);
+    }
+  }, [res, filterBy, sortBy, setOriginalCards, setModifiedCards]);
 
-    debouncedSetCards(); // Initial call
-
-    // Cleanup function
-    return () => cancel();
-  }, [searchValue, res, setOriginalCards, setModifiedCards]);
-
+  if (error) {
+    return <h1>Error</h1>;
+  }
   return (
     <div className={styles.search}>
       <ion-icon name="search-outline"></ion-icon>
