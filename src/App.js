@@ -9,7 +9,7 @@ import { Favorites } from "./shared-components/favorites/favorites";
 // use story telling in the intruduce ur self
 function App() {
   const [showFavorites, setShowFavorites] = useState("none");
-
+  console.log(document.documentElement.style);
   return (
     <div className="App">
       <Header
@@ -18,9 +18,12 @@ function App() {
       />
       <BottomHeader />
       <Routes>
-        <Route path="/">
+        <Route path="/Ahmad-Salous-TAP-React-Project">
           <Route index element={<Main />} />
-          <Route path="details/:id" element={<Details />} />
+          <Route
+            path="Ahmad-Salous-TAP-React-Project/details/:id"
+            element={<Details />}
+          />
         </Route>
       </Routes>
       <Favorites showFavorites={showFavorites} />

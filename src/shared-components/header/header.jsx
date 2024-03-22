@@ -13,14 +13,14 @@ export function Header({ showFavorites, setShowFavorites }) {
   const handleDarkMood = () => {
     if (colorMood === "dark") {
       setColorMood("light");
-      documentRoot.current.style.setProperty("--background-color", "#f5f5f5");
+      documentRoot.current.style.setProperty("--bg_body", "red");
       documentRoot.current.style.setProperty(
         "--dark-background-color",
         "#1a1a1a"
       );
     } else {
       setColorMood("dark");
-      documentRoot.current.style.setProperty("--background-color", "#1a1a1a");
+      documentRoot.current.style.setProperty("--bg_body", "green");
       documentRoot.current.style.setProperty(
         "--dark-background-color",
         "#f5f5f5"
