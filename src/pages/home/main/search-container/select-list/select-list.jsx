@@ -9,20 +9,34 @@ export function SelectList({
   setModifiedCards,
   id,
   options,
+  sortBy,
+  filterBy,
 }) {
-  const handleSort = (e) => {
+  const handleChange = (e) => {
     const changeBy = e.target.value;
 
     if (id === 0) {
-      const changeBy = e.target.value;
-      if (changeBy === "default") {
-        setModifiedCards(originalCards);
-        return;
+      sortBy.current = changeBy;
+      let sorted;
+      if (sortBy.current === "default") {
+        sorted = sortCards(originalCards, sortBy.current);
+      } else {
+        // Sort the modified cards
+        sorted = sortCards(modifiedCards, sortBy.current);
       }
-      setModifiedCards(sortCards(modifiedCards, changeBy));
+      // Filter the sorted cards
+      const filtered = filterCards(sorted, filterBy.current);
+      // Update modified cards
+      setModifiedCards(filtered);
     }
     if (id === 1) {
-      setModifiedCards(filterCards(modifiedCards, changeBy));
+      filterBy.current = changeBy;
+      // Filter the original cards
+      const filtered = filterCards(originalCards, filterBy.current);
+      // Sort the filtered cards
+      const sorted = sortCards(filtered, sortBy.current);
+      // Update modified cards
+      setModifiedCards(sorted);
     }
   };
 
@@ -33,7 +47,7 @@ export function SelectList({
         name={label}
         id={label}
         onChange={(e) => {
-          handleSort(e);
+          handleChange(e);
         }}
       >
         <option value="default">Default</option>

@@ -1,7 +1,7 @@
 const filterCards = (cards = [], filterBy = "default") => {
   let filteredCards = [];
   if (filterBy === "default") {
-    return;
+    return cards;
   }
   filteredCards = cards.filter((card) => {
     if (card.category === filterBy) return true;

@@ -24,6 +24,7 @@ export function Main() {
     <div className={styles.Main}>
       <SearchContainer
         originalCards={originalCards}
+        setOriginalCards={setOriginalCards}
         modifiedCards={modifiedCards}
         setModifiedCards={setModifiedCards}
       />

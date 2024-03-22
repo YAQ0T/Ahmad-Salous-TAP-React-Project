@@ -1,7 +1,7 @@
 const sortCards = (cards = [], sortBy = "default") => {
   let sortedCard = [];
   if (sortBy === "default") {
-    return;
+    return cards;
   }
   sortedCard = cards.slice().sort((a, b) => {
     const A = a[sortBy];
