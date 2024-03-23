@@ -5,7 +5,7 @@ import styles from "./card-with-button.module.css";
 export function CardWithButton({ image, name, author }) {
   return (
     <div className={styles.cardWithButtonContainer}>
-      <img src={`./logos/${image}`} alt={image} />
+      <img src={require(`../../assits/logos/${image}`)} alt={image} />
       <div className={styles.cardWithButtonInfo}>
         <p>
           <b>{name}</b> by <a href="./">{author}</a>

@@ -9,7 +9,7 @@ export function Cards({ cards }) {
           <Card
             key={card.id}
             id={card.id}
-            image={`./logos/${card.image}`}
+            image={require(`../../../../assits/logos/${card.image}`)}
             title={card.category}
             name={card.topic}
             stars={5}
