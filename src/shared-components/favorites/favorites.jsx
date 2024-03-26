@@ -1,8 +1,15 @@
+import { useContext, useEffect } from "react";
 import { Paragraph } from "../Text/paragraph";
 import { SmallCard } from "../small-card/small-card";
 import styles from "./favorites.module.css";
-
-export function Favorites({ showFavorites }) {
+import { FavoritesContext } from "../../contexts/FavoritesContext";
+export function Favorites({ showFavorites, originalCards }) {
+  const { favsSet, addFav } = useContext(FavoritesContext);
+  useEffect(() => {
+    addFav(1);
+    addFav(2);
+    addFav(3);
+  }, []);
   return (
     <div
       className={styles.favoritesContainer}
@@ -11,34 +18,18 @@ export function Favorites({ showFavorites }) {
       <div className={styles.favoritesInnerContainer}>
         <Paragraph data={"My Favorites Topics"} size={"17px"} weight={"700"} />
         <div className={styles.smallCards}>
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />{" "}
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />{" "}
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"react.webp"} name={"REACT"} stars={5} />
-          <SmallCard image={"html.png"} name={"HTML"} stars={5} />
+          {originalCards.map((card) => {
+            if (!favsSet.has(card.id)) {
+              return null;
+            }
+            return (
+              <SmallCard
+                image={card.image}
+                name={card.topic}
+                stars={card.rating}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

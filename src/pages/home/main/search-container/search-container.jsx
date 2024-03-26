@@ -3,7 +3,7 @@ import styles from "./search-container.module.css";
 import { Search } from "./search/search";
 import { SelectList } from "./select-list/select-list";
 import { useRef } from "react";
-
+import { useDebounce } from "../../../../hooks/useDebounce";
 export function SearchContainer({
   originalCards,
   setOriginalCards,
@@ -13,7 +13,10 @@ export function SearchContainer({
   const [filterTypes, setFilterTypes] = useState([]);
   let sortBy = useRef("default");
   let filterBy = useRef("default");
-
+  //for search component
+  const [searchValue, setSearchValue] = useState("");
+  const debouncedSearched = useDebounce(searchValue);
+  //
   const getFilterTypes = () => {
     const filterTypes = Array.from(
       new Set(originalCards.map((card) => card.category))
@@ -30,6 +33,9 @@ export function SearchContainer({
         setModifiedCards={setModifiedCards}
         sortBy={sortBy}
         filterBy={filterBy}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        debouncedSearched={debouncedSearched}
       />
       <div className={styles.modifyContainer}>
         <SelectList

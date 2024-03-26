@@ -1,19 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styles from "./search.module.css";
 import UseAxios from "../../../../../hooks/useAxios";
 import filterCards from "../../../../../utils/filter-cards";
 import sortCards from "../../../../../utils/sort-cards";
-import { useDebounce } from "../../../../../hooks/useDebounce";
 
 export function Search({
-  value,
   setOriginalCards,
   setModifiedCards,
   filterBy,
   sortBy,
+  searchValue,
+  setSearchValue,
+  debouncedSearched,
 }) {
-  const [searchValue, setSearchValue] = useState("");
-  const debouncedSearched = useDebounce(searchValue);
   const { res, error } = UseAxios(
     `https://tap-web-1.herokuapp.com/topics/list?phrase=${debouncedSearched}`
   );
