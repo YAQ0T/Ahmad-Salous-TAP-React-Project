@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Ahmad-Salous-TAP-React-Project/static/css/main.131a42cf.css",
-    "main.js": "/Ahmad-Salous-TAP-React-Project/static/js/main.97dd0c70.js",
+    "main.css": "/Ahmad-Salous-TAP-React-Project/static/css/main.7305fbf7.css",
+    "main.js": "/Ahmad-Salous-TAP-React-Project/static/js/main.5330c1fd.js",
     "static/js/453.08106103.chunk.js": "/Ahmad-Salous-TAP-React-Project/static/js/453.08106103.chunk.js",
     "static/media/analytics.png": "/Ahmad-Salous-TAP-React-Project/static/media/analytics.7e81c6ec23532162f2ea.png",
     "static/media/angular.png": "/Ahmad-Salous-TAP-React-Project/static/media/angular.fe7fe0b7dad8f1ba6bbd.png",
@@ -40,12 +40,12 @@
     "static/media/expressjs.webp": "/Ahmad-Salous-TAP-React-Project/static/media/expressjs.2ae1dc58f7c5318ca228.webp",
     "static/media/react.webp": "/Ahmad-Salous-TAP-React-Project/static/media/react.55afe679a76823cdda39.webp",
     "index.html": "/Ahmad-Salous-TAP-React-Project/index.html",
-    "main.131a42cf.css.map": "/Ahmad-Salous-TAP-React-Project/static/css/main.131a42cf.css.map",
-    "main.97dd0c70.js.map": "/Ahmad-Salous-TAP-React-Project/static/js/main.97dd0c70.js.map",
+    "main.7305fbf7.css.map": "/Ahmad-Salous-TAP-React-Project/static/css/main.7305fbf7.css.map",
+    "main.5330c1fd.js.map": "/Ahmad-Salous-TAP-React-Project/static/js/main.5330c1fd.js.map",
     "453.08106103.chunk.js.map": "/Ahmad-Salous-TAP-React-Project/static/js/453.08106103.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.131a42cf.css",
-    "static/js/main.97dd0c70.js"
+    "static/css/main.7305fbf7.css",
+    "static/js/main.5330c1fd.js"
   ]
 }
