@@ -5,12 +5,13 @@ export function IconicFavoritesButton({
   icon,
   backgroundColor,
   id,
-  ...prep
+  ...props
 }) {
   return (
     <button
       className={styles.IconicFavoritesButtonContainer}
       style={{ backgroundColor: backgroundColor }}
+      {...props}
     >
       {name}
       {icon}

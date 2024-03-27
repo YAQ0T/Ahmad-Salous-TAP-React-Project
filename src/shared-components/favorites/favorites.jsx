@@ -1,15 +1,11 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Paragraph } from "../Text/paragraph";
 import { SmallCard } from "../small-card/small-card";
 import styles from "./favorites.module.css";
 import { FavoritesContext } from "../../contexts/FavoritesContext";
 export function Favorites({ showFavorites, originalCards }) {
-  const { favsSet, addFav } = useContext(FavoritesContext);
-  useEffect(() => {
-    addFav(1);
-    addFav(2);
-    addFav(3);
-  }, []);
+  const { favsSet } = useContext(FavoritesContext);
+
   return (
     <div
       className={styles.favoritesContainer}
@@ -27,6 +23,7 @@ export function Favorites({ showFavorites, originalCards }) {
                 image={card.image}
                 name={card.topic}
                 stars={card.rating}
+                key={card.id}
               />
             );
           })}

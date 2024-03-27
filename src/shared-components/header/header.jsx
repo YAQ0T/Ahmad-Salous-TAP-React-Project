@@ -1,32 +1,15 @@
-import { useRef, useState } from "react";
+import { useContext } from "react";
 import { MediumTitle } from "../Text/medium-title";
 import { IconicButton } from "../iconic-button/iconic-button";
 import styles from "./header.module.css";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 export function Header({ showFavorites, setShowFavorites }) {
-  const [colorMood, setColorMood] = useState("light");
-  const documentRoot = useRef(document.documentElement);
   const handleShowFavoritesClick = () => {
     if (showFavorites === "none") setShowFavorites("flex");
     else setShowFavorites("none");
   };
-  const handleDarkMood = () => {
-    if (colorMood === "dark") {
-      setColorMood("light");
-      documentRoot.current.style.setProperty("--bg_body", "red");
-      documentRoot.current.style.setProperty(
-        "--dark-background-color",
-        "#1a1a1a"
-      );
-    } else {
-      setColorMood("dark");
-      documentRoot.current.style.setProperty("--bg_body", "green");
-      documentRoot.current.style.setProperty(
-        "--dark-background-color",
-        "#f5f5f5"
-      );
-    }
-  };
+  const { ThemeState, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div className={styles.Header}>
@@ -37,9 +20,9 @@ export function Header({ showFavorites, setShowFavorites }) {
       />
       <nav className={styles.navButtons}>
         <IconicButton
-          icon={"moon"}
-          label={"Dark Mode"}
-          onClick={handleDarkMood}
+          icon={ThemeState === "lightMode" ? "moon" : "sunny"}
+          label={ThemeState === "lightMode" ? "Dark Mode" : "Light Mode"}
+          onClick={() => toggleTheme()}
         />
         <IconicButton
           icon={"heart"}

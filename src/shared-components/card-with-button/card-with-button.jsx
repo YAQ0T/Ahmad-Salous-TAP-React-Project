@@ -2,7 +2,7 @@ import { Paragraph } from "../Text/paragraph";
 import { IconicFavoritesButton } from "../iconic-favorites-button/iconic-favorites-button";
 import styles from "./card-with-button.module.css";
 
-export function CardWithButton({ image, name, author }) {
+export function CardWithButton({ addState, image, name, author, ...props }) {
   return (
     <div className={styles.cardWithButtonContainer}>
       <img src={require(`../../assits/logos/${image}`)} alt={image} />
@@ -14,9 +14,12 @@ export function CardWithButton({ image, name, author }) {
         <div className={styles.cardWithButtonInnerInfo}>
           <Paragraph data={"Interested about this Topic?"} weight={"600"} />
           <IconicFavoritesButton
-            name={"Add to Favorites"}
+            name={
+              addState === true ? "Add ro favorites" : "Remove from favorites"
+            }
             backgroundColor={"var(--brand-secondary)"}
             icon={<ion-icon name="heart-outline"></ion-icon>}
+            {...props}
           />
           <Paragraph
             data={"Unlimited Credits"}
