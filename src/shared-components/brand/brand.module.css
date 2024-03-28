@@ -27,3 +27,12 @@
     rgba(3, 193, 129, 1)
   );
 }
+
+@media (max-width: 908px) {
+  #brandRight {
+    height: 45px;
+  }
+  #brandLeft {
+    height: 45px;
+  }
+}

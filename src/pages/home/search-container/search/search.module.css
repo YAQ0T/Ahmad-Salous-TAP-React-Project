@@ -11,3 +11,18 @@
   font-size: 17px;
   background-color: var(--bg_default);
 }
+
+@media (max-width: 908px) {
+  .search input {
+    width: 90%;
+  }
+  .search {
+    justify-content: flex-start;
+    width: 100%;
+    border-bottom: 0.125rem solid var(--lines-color);
+    height: 55px;
+  }
+  .search ion-icon {
+    width: 30px;
+  }
+}

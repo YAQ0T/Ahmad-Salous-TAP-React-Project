@@ -2,7 +2,7 @@ import styles from "./select-list.module.css";
 
 export function SelectList({ label, id, options, handleSelectChange }) {
   return (
-    <div className={styles.selectContainer}>
+    <div className={styles.selectContainer} id={`list${id}`}>
       <label htmlFor={label}>{label}</label>
       <select
         name={label}

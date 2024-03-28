@@ -21,3 +21,10 @@ select {
   font-weight: 600;
   background-color: var(--bg_default);
 }
+
+@media (max-width: 908px) {
+  #select0 {
+    border-left: 0;
+    background-color: black;
+  }
+}

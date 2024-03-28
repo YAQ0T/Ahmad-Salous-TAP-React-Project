@@ -11,3 +11,12 @@
   min-width: 115px;
   justify-content: space-around;
 }
+
+@media (max-width: 400px) {
+  .container p {
+    display: none;
+  }
+  .container {
+    min-width: 20px;
+  }
+}

@@ -12,3 +12,18 @@
   width: 29%;
   justify-content: space-around;
 }
+
+@media (max-width: 908px) {
+  .searchContainer {
+    display: grid;
+    height: 110px;
+  }
+  .modifyContainer {
+    display: flex;
+    width: 92vw;
+    justify-content: space-around;
+  }
+  .modifyContainer :first-child {
+    border-left: 0;
+  }
+}
