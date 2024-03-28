@@ -3,7 +3,7 @@ import { Paragraph } from "../Text/paragraph";
 import { SmallCard } from "../small-card/small-card";
 import styles from "./favorites.module.css";
 import { FavoritesContext } from "../../contexts/FavoritesContext";
-export function Favorites({ showFavorites, originalCards }) {
+export function Favorites({ showFavorites, cards = [] }) {
   const { favsSet } = useContext(FavoritesContext);
 
   return (
@@ -14,7 +14,7 @@ export function Favorites({ showFavorites, originalCards }) {
       <div className={styles.favoritesInnerContainer}>
         <Paragraph data={"My Favorites Topics"} size={"17px"} weight={"700"} />
         <div className={styles.smallCards}>
-          {originalCards.map((card) => {
+          {cards.map((card) => {
             if (!favsSet.has(card.id)) {
               return null;
             }

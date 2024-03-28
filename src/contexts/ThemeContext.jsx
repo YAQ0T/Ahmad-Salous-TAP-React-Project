@@ -9,8 +9,10 @@ export function ThemeContextProvider({ children }) {
   const toggleTheme = (e) => {
     if (ThemeState === "darkMode") {
       setThemeState("lightMode");
+      document.documentElement.style.setProperty("--bg_body", " #f0f9ff");
     } else {
       setThemeState("darkMode");
+      document.documentElement.style.setProperty("--bg_body", " #282828");
     }
   };
   return (

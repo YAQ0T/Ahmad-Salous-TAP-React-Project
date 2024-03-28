@@ -1,4 +1,4 @@
-import { Card } from "../../../../shared-components/card/card";
+import { Card } from "../../../shared-components/card/card";
 import styles from "./cards.module.css";
 
 export function Cards({ cards }) {
@@ -9,7 +9,7 @@ export function Cards({ cards }) {
           <Card
             key={card.id}
             id={card.id}
-            image={require(`../../../../assits/logos/${card.image}`)}
+            image={require(`../../../assits/logos/${card.image}`)}
             title={card.category}
             name={card.topic}
             stars={5}

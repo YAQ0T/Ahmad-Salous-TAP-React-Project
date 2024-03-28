@@ -9,18 +9,19 @@ import { FavoritesContext } from "../../contexts/FavoritesContext";
 export function Details() {
   const [addState, setAddState] = useState(true);
   let { id } = useParams();
+  id = Number(id);
   const { res, error } = useAxios(
     `https://tap-web-1.herokuapp.com/topics/details/${id}`
   );
   const { favsSet, addFav, removeFav } = useContext(FavoritesContext);
   const handleAddFav = () => {
-    addFav(Number(id));
+    addFav(id);
   };
   const handleRemoveFav = () => {
-    removeFav(Number(id));
+    removeFav(id);
   };
   useEffect(() => {
-    if (favsSet.has(Number(id))) {
+    if (favsSet.has(id)) {
       setAddState(false);
     } else {
       setAddState(true);

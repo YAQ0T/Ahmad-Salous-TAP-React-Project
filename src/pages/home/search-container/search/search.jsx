@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import styles from "./search.module.css";
-import UseAxios from "../../../../../hooks/useAxios";
-import filterCards from "../../../../../utils/filter-cards";
-import sortCards from "../../../../../utils/sort-cards";
+import UseAxios from "../../../../hooks/useAxios";
+import filterCards from "../../../../utils/filter-cards";
+import sortCards from "../../../../utils/sort-cards";
 
 export function Search({
   setOriginalCards,
@@ -10,16 +10,13 @@ export function Search({
   filterBy,
   sortBy,
   searchValue,
-  setSearchValue,
   debouncedSearched,
+  handleInputSearch,
 }) {
   const { res, error } = UseAxios(
     `https://tap-web-1.herokuapp.com/topics/list?phrase=${debouncedSearched}`
   );
-  const handleInput = (e) => {
-    let value = e.target.value;
-    setSearchValue(value);
-  };
+
   useEffect(() => {
     if (res) {
       setOriginalCards(res);
@@ -37,7 +34,7 @@ export function Search({
     <div className={styles.search}>
       <ion-icon name="search-outline"></ion-icon>
       <input
-        onInput={handleInput}
+        onInput={handleInputSearch}
         value={searchValue}
         type="search"
         name="search"

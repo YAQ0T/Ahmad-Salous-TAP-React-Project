@@ -9,4 +9,5 @@
   width: 96%;
   border: 0;
   font-size: 17px;
+  background-color: var(--bg_default);
 }

@@ -1,4 +1,4 @@
-import { BigTitle } from "../../../../shared-components/Text/big-title";
+import { BigTitle } from "../../../shared-components/Text/big-title";
 import styles from "./search-results.module.css";
 
 export function SearchResults({ counter }) {
