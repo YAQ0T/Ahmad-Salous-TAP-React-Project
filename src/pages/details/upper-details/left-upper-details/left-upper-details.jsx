@@ -1,5 +1,5 @@
 import styles from "./left-upper-details.module.css";
-import { Paragraph } from "../../../../shared-components/Text/paragraph";
+import { Paragraph } from "../../../../shared-components/Text/Paragraph";
 import { BigTitle } from "../../../../shared-components/Text/big-title";
 import { Stars } from "../../../../shared-components/stars/stars";
 export function LeftUpperDetails({ title, name, stars, moreInfo }) {

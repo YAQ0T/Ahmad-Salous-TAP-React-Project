@@ -25,3 +25,15 @@
   list-style-type: none;
   width: 100%;
 }
+@media screen  and (max-width: 822px){
+  .subTopicsContainer{
+    position :relative;
+    z-index: 0;
+    left: 0;
+
+    width: 80%;
+  padding: 0px;
+  padding-top: 20px;
+
+
+  }}

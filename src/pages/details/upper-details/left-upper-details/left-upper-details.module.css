@@ -6,6 +6,7 @@
   position: relative;
   left: 18%;
 }
+
 .innerLeftUpperDetailsContainer {
   display: flex;
   flex-direction: column;
@@ -19,4 +20,17 @@
 }
 .innerLeftUpperDetailsContainer > p:nth-child(1) {
   margin-bottom: 0;
+}
+@media screen  and (max-width: 822px){
+  .leftUpperDetailsContainer{
+    position :relative;
+    z-index: 0;
+    left: 0;
+    width: 80%;
+  padding: 0px;
+  padding-top: 20px;
+
+
+  }
+  
 }

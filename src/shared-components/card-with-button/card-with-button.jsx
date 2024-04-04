@@ -1,4 +1,4 @@
-import { Paragraph } from "../Text/paragraph";
+import { Paragraph } from "../Text/Paragraph";
 import { IconicFavoritesButton } from "../iconic-favorites-button/iconic-favorites-button";
 import styles from "./card-with-button.module.css";
 

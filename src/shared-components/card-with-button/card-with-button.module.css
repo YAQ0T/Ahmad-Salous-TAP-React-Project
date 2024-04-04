@@ -12,6 +12,15 @@
   box-shadow: 0px 2px 3px 0px var(--lines-color);
   align-items: center;
 }
+@media screen  and (max-width: 822px){
+  .cardWithButtonContainer{
+    position :relative;
+    z-index: 0;
+    width: 80%;
+    left: 0;
+  }
+  
+}
 .cardWithButtonContainer > img {
   width: 100%;
   height: 200px;

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Paragraph } from "../Text/paragraph";
+import { Paragraph } from "../Text/Paragraph";
 import { SmallCard } from "../small-card/small-card";
 import styles from "./favorites.module.css";
 import { FavoritesContext } from "../../contexts/FavoritesContext";

@@ -1,5 +1,5 @@
 import styles from "./small-card.module.css";
-import { Paragraph } from "../Text/paragraph";
+import { Paragraph } from "../Text/Paragraph";
 import { Stars } from "../stars/stars";
 export function SmallCard({ image, name, stars }) {
   return (
